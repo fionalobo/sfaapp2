@@ -1,0 +1,117 @@
+<ui-view>
+<div>
+  <div class="topcoatx-navigation-bar__item fltL ten-perc">
+            <button class="topcoat-icon-button--quiet" ng-click="goMenuPg()" style="margin-left:5px;" href="" >
+                <img class="topcoat-icon" src="img/home-yellow-icon.png"/>
+            </button>
+  </div>
+  <div class="topcoatx-navigation-bar">
+       <div class="topcoatx-navigation-bar__item center ">
+          <div class="topcoatx-navigation-bar__title">Doctor Visit</div>
+       </div>
+  </div>
+
+ <tabset >
+   <!-- <tab heading="Visit Details" active="tabs[0].active" >-->
+   <tab>
+
+      <tab-heading>
+          <a  ui-sref-active="tabs[0].active">Visit Details</a>
+        </tab-heading>
+
+
+       <!-- <div class="full box ninety-perc">-->
+          <div style="padding:5px;margin:5px;">
+                <div>
+                    <div class="label">Visit Date : {{docvishd.visdate | date:'fullDate'}}</div>
+                </div>
+                <br/>
+
+                <div>
+                    <div class="label" >Visit Time</div>
+                    <div class="errmsg full" data-ng-bind="state_docvishd.vistime.message"></div>            
+                    <div class="thirty-perc">
+                          <input type="time" class="topcoatx-text-input" data-ng-model="docvishd.vistime" name="vistime" data-ng-disabled="curMode == 1" maxlength="5" data-ng-focus="onFocus('vistime')" placeholder="Select Time" data-ng-blur="onBlur('vistime')" autofocus required >
+              
+                    </div>
+                </div>
+                <br/>
+
+                <div>
+                    <div  class="label" >Town</div>
+                    <div class="errmsg full" data-ng-bind="state_docvishd.town.message"></div>
+                    <div>
+                        <input type="text" class="topcoatx-text-input upper full" data-ng-model="docvishd.town" name="town"  maxlength="20" setfocus="curMode == 1" data-ng-focus="onFocus('town')" placeholder="Enter Town" data-ng-click="callDdn('town')" data-ng-blur="onBlur('town')" required>
+                    </div>
+                </div>
+                <br/>
+
+                <div>
+                    <div class="label" >Doctor</div>
+                    <div class="errmsg full" data-ng-bind="state_docvishd.doctcd.message"></div>
+                    <div>
+                        <input type="text" class="topcoatx-text-input upper full" data-ng-model="docvishd.doctcd" name="doctcd"  maxlength="10" data-ng-focus="onFocus('doctcd')" placeholder="Enter Doctor"  data-ng-click="callDdn('doctcd')"  data-ng-blur="onBlur('doctcd')" required>
+                    </div>
+                </div>
+                <br/>
+
+                <div>
+   
+                    <div class="label" >Remarks</div>
+                    <div class="errmsg full" data-ng-bind="state_docvishd.remarks.message"></div>
+                    <div>
+                        <textarea class="topcoatx-textarea full" data-ng-model="docvishd.remarks" name="remarks" rows="6" cols="30" data-ng-focus="onFocus('remarks')" placeholder="Enter Remarks" data-ng-blur="onBlur('remarks')"></textarea>           
+                    </div>
+                </div>
+                <br/>
+
+                <div class="topxcoat-button-barblue">
+                    <div class="topcoatx-button-barblue__item">
+                        <button class="topcoatx-button-barblue__button"  data-ng-click="saveEntry()" data-ng-disabled="curMode == 0">Save</button>
+                    </div>
+                    <div class="topcoatx-button-barblue__item">
+                        <button class="topcoatx-button-barblue__button" data-ng-click="cancelEntry()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+    </tab>
+    <!--select="selProd()"-->
+<!--    <tab heading="Products Briefed"  active="tabs[1].active" >-->
+<tab>
+       <tab-heading ng-click="selProd()" >
+          <a  ui-sref-active="tabs[1].active">Products Briefed</a>
+        </tab-heading>
+
+      <div class="full">
+         <div class="header" >
+           <div class="thcol1 thirty-perc fltL">Product</div>
+           <div class="thcol2 ten-perc fltL right">Sample</div>
+           <div class="fltR">
+                <button class="topcoatx-buttonblue " style="vertical-align: middle;" data-ng-click="prodAdd()">Add </button>
+           </div>
+         </div> 
+         <!--<div style="height=auto;"class="tbldata full" ng-repeat="docvispg in docvispg_querySet | filter:{vissrl:docvishd.vissrl}" data-ng-show="docvispg.w_rectype !== 'D'" >-->
+         <div style="height=auto;"class="tbldata full" ng-repeat="docvispg in docvispg_querySet "  >
+           <div class="tdcol1 thirty-perc fltL">{{docvispg.prodname}}<br> <span class="small">{{docvispg.prodcd}}</span></div>
+           <div class="tdcol2 fltL ten-perc right" >{{docvispg.sampleqty}}</div>
+           <div class="fltR forty-perc">
+              <div class="fltR">
+                <!--Text-Edit-icon.png  bdelete.png-->
+                <span class="tdpic"><button  class="topcoat-icon-button--quiet" data-ng-click="prodEdit(docvispg.w_recseq)"  ><img class="topcoat-icon" src="img/Editor.png"></img></button></span>
+                <span class="tdpic"><button class="topcoat-icon-button--quiet" data-ng-click="prodDel(docvispg.w_recseq)"><img class="topcoat-icon" src="img/del.png"></img></button></span>
+              </div>    
+            </div>
+         </div>
+        <!-- <div class="full orangefoot"></div>-->
+      </div>
+      <br/>
+      <div style="margin-left:45%" class="topcoat-button-bar ">
+        <div class="topcoat-button-bar__item">
+           <button class="topcoatx-buttonblue " ng-click="donewithProd()" >Done </button>
+        </div>
+      </div>    
+     </tab>
+  </tabset>
+</div>
+</ui-view>

@@ -1,0 +1,85 @@
+<div id="sp-nav">
+    <div class="topcoat-list-container" style="background-color: #31394a;color:#c4ccda;">
+        <div style="line-height:3.375rem;padding:0 5px;border-top: 0px solid #434b5c;border-bottom: 0px solid #434b5c;background: -webkit-gradient(linear, left bottom,left top, from(#667DA5), to(#174392));">Hi {{myUser}}</div>
+        <div id="scroll_menu" >
+        <ul class="topcoat-list" style="background-color: #31394a;color:#c4ccda;border-top: 1px solid #242a37;border-bottom: 1px solid #434b5c;">
+            <!-- Transactions -->
+            <li class="topcoat-list__item" style="height:22px;background-color:#434b5c;padding:0;-webkit-box-flex: 1;font-size: 10px;font-weight: bold;line-height: 22px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;background: -webkit-gradient(linear, left bottom,left top, from(#636E88), to(#242a37));">
+                <span>Transactions</span>
+            </li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;" data-ng-click="OnClick_DocVisit()">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/doctor-visit.png"/>                
+                <span style="margin-left:5px;">Doctor Visit</span>
+            </li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/customer.png"/>
+                <span style="margin-left:5px;">Secondary Customer Vist</span>
+            </li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/expense-claim.png"/>
+                <span style="margin-left:5px;">Field Expense Claim</span>
+            </li>
+            <!-- MIS -->
+            <li class="topcoat-list__item" style="height:22px;background-color:#434b5c;padding:0;-webkit-box-flex: 1;font-size: 10px;font-weight: bold;line-height: 22px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;background: -webkit-gradient(linear, left bottom,left top, from(#636E88), to(#242a37));">MIS</li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/reports_icon.png"/>
+                <span style="margin-left:5px;">Tour Target v/s Actual Visits</span>
+            </li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/reports_icon.png"/>
+                <span style="margin-left:5px;">Stockist Sales - Budget v/s Actuals</span>
+            </li>
+            <!-- Help and Settings -->
+            <li class="topcoat-list__item" style="height:22px;background-color:#434b5c;padding:0;-webkit-box-flex: 1;font-size: 10px;font-weight: bold;line-height: 22px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;background: -webkit-gradient(linear, left bottom,left top, from(#636E88), to(#242a37));">Help and Settings</li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/help_icon.png"/>
+                <span style="margin-left:5px;">Help Centre</span>
+            </li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/terms_icon.png"/>
+                <span style="margin-left:5px;">Terms and Conditions</span>
+            </li>
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/settings_icon.png"/>
+                <span style="margin-left:5px;">Settings</span>
+            </li>            
+            <li class="topcoat-list__item" style="height:42px;padding:0;-webkit-box-flex: 1;font-size: 16px;font-weight: bold;line-height: 42px;overflow: hidden;padding: 0 5px;text-overflow: ellipsis;white-space: nowrap;text-shadow: 0 1px 0 rgba(0, 0, 0, .6);border-top: 1px solid #434b5c;border-bottom: 1px solid #242a37;font-size: 14px;">
+                <img class="topcoat-icon" style="border-radius:5px;" src="img/Log-Out-icon.png"/>
+                <span style="margin-left:5px;" data-ng-click="OnLogout()">Logout</span>
+            </li>
+
+        </ul>
+    </div>
+    </div>
+</div>
+
+<div id="sp-page">
+    <div class="topcoatx-navigation-bar">
+        <div class="topcoatx-navigation-bar__item seventy-perc fltL">
+            <div ng-click="$spMenu.toggle()" style="overflow:hidden;text-overflow:ellipsis;white-space: nowrap;max-height:3.375rem;">
+                <img class="topcoat-icon" style="height:2rem;width:2rem;" src="img/menu_icon.png"/>
+                    Progen ERP Systems Pvt. Ltd.
+            </div>
+        </div>
+
+        <div class="topcoatx-navigation-bar__item right twenty-perc fltR" data-ng-click="OnClick_Login()">
+            <div class="half fltL" style="overflow:hidden;text-overflow:ellipsis;">Hi {{myUser}}</div>
+            <div class="half fltR"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/login-icon.png"/></div>
+        </div>
+    </div>
+    
+    <div style="background-color:#353d46;position:fixed;bottom:0;height:20%;width:100%;margin:0px;opacity:0.8;filter:alpha(opacity=60);padding-top:5px;">
+        <div style="height:50%">
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;" data-ng-click="OnClick_DocVisit()"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/doctor-visit.png"/></div>
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/customer.png"/></div>
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/expense-claim.png"/></div>
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/reports_icon.png"/></div>
+        </div>
+        <div style="height:50%">
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/help_icon.png"/></div>
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/terms_icon.png"/></div>
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/settings_icon.png"/></div>
+            <div class="quarter fltL" style="height:100%;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;"><img class="topcoat-icon" style="height:2.5rem;width:2.5rem;border-radius:5px;" src="img/Log-Out-icon.png"/></div>
+        </div>
+    </div>
+</div>

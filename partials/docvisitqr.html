@@ -1,0 +1,65 @@
+<ui-view>
+<div ng-controller="DocCtrl">
+ 
+    <div class="topcoatx-navigation-bar">
+        <div class="topcoatx-navigation-bar__item ten-perc fltL">
+<!--            <div style="overflow:hidden;text-overflow:ellipsis;white-space: nowrap;max-height:3.375rem;margin-left: 5px;">
+                <img class="topcoat-icon" style="height:2rem;width:2rem;" src="img/home-yellow-icon.png"/>
+            </div>-->
+            <button class="topcoat-icon-button--quiet" style="margin-left:5px;" href="" ng-click="goMenuPg()">
+                <img class="topcoat-icon" src="img/home-yellow-icon.png"/>
+            </button>
+        </div>
+
+        <div class="topcoatx-navigation-bar__item right eighty-perc">
+            <div class="topcoatx-navigation-bar__title center">Doctor Visit</div>
+        </div>
+    </div>
+
+    <div class="boxorange">
+        
+        <div style="float: left;vertical-align: middle;margin-top: 5px;margin-left: 15px" class="thirty-perc">
+            <div class="icon fltL" >
+                <em data-ng-click="callDtSelect('visdate')">{{m.dayofweek}}</em>
+                <strong data-ng-click="callDtSelect('visdate')" >{{m.month}} </strong>
+                <span data-ng-click="callDtSelect('visdate')"  >{{m.day}}</span>
+            </div>
+        </div>
+        
+        <div class="fltL sixty-perc">
+            <div class="fltL" style="vertical-align: middle;margin: 15px;">
+                <button class="topcoatx-buttonred"  data-ng-click="getData('456')">Search Visit</button>
+            </div>
+        </div>
+    </div>
+   
+    <div class="full">
+        <div  class="header">
+            <div class="thcol1 fltL ten-perc">Time</div>
+            <div class="thcol2 fltL">Doctor</div>
+            <div class="fltR" style="padding-right:5px;">
+                <button class="topcoatx-buttonblue " style="vertical-align: middle;" setfocus="lastOpr=='add'" data-ng-click="addEntry()">Add </button>
+            </div>
+            <div class="fltC"></div>
+        </div>
+
+        <div class="tbldata full" data-ng-repeat="docvishd in docvishd_querySet " data-ng-show="docvishd.w_rectype !== 'D'">
+            <div class="fltL tdcol1 ten-perc">{{docvishd.vistime}}</div>
+            <div class="fltL tdcol2 thirty-perc">{{docvishd.doctname}}({{docvishd.doctcd}})<br> <span class="small">{{docvishd.town}}</span><br><span class="small">{{docvishd.remarks}}</span>
+            </div>
+            <!-- Text-Edit-icon.png  bdelete.png-->
+            <div class="fltR forty-perc">
+                <div class="fltR">
+                    <span class="tdpic"><button class="topcoat-icon-button--quiet" setfocus="lastPtr==docvishd.w_recseq && lastOpr=='edit'" data-ng-click="editEntry(docvishd.w_recseq)"><img class="topcoat-icon" src="img/text_edit.png"></img></button>
+                    </span>
+                    <span class="tdpic"><button class="topcoat-icon-button--quiet" data-ng-click="delEntry(docvishd.w_recseq)"><img class="topcoat-icon" src="img/remove.jpg"></img></button></span>
+                </div>    
+            </div>
+       </div>   
+        <div class="full orangefoot"></div>
+    </div>
+
+</div>
+
+
+</ui-view>

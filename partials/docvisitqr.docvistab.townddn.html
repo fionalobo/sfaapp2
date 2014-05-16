@@ -1,0 +1,33 @@
+<div>
+      <div class="topcoatx-navigation-bar__item fltL ten-perc">
+            <button class="topcoat-icon-button--quiet" style="margin-left:5px;" href="" ng-click="goMenuPg()">
+                <img class="topcoat-icon" src="img/home-yellow-icon.png"/>
+            </button>
+      </div>
+       <div class="topcoatx-navigation-bar">
+           <div class="topcoatx-navigation-bar__item center">
+             <div class="topcoatx-navigation-bar__title">Select Town</div>
+           </div>
+        </div>
+
+    <div style="margin: 5px;" >
+    <input type="search" class="topcoatx-search-input " data-ng-model="searchstring" name="searchstring" ng-change="hidesearch=true" placeholder="Start typing a Town " />
+    </div>
+   
+    <div class="topcoatx-list " style="top:138px;">
+
+      <div class="topcoatx-list__header" ng-init="hidesearch=false" ng-hide="hidesearch">Search History</div>
+        <ul class="topcoatx-list__container" ng-hide="hidesearch" >
+        <li class="topcoatx-list__item" data-ng-repeat="twn in recenttown ">
+          <a data-ng-click="selectTown(twn.town)">{{ twn.town  }}</a>
+        </li>
+      </ul>
+      <div class="topcoatx-list__header">Town List</div>  
+      <ul class="topcoatx-list__container">
+        <li class="topcoatx-list__item" data-ng-repeat="twn in townmst | filter:{town:searchstring} | filter:{headqrt:docvishd.headqrt} ">
+          <a data-ng-click="selectTown(twn.town)">{{ twn.town  }}</a>
+        </li>
+      </ul>
+    </div>
+
+</div>

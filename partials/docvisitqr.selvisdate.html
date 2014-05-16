@@ -1,0 +1,19 @@
+<div>
+      <div class="topcoatx-navigation-bar__item fltL ten-perc">
+            <button class="topcoat-icon-button--quiet" style="margin-left:5px;" href="" ng-click="goMenuPg()">
+                <img class="topcoat-icon" src="img/home-yellow-icon.png"/>
+            </button>
+      </div>
+      <div class="topcoatx-navigation-bar">
+           <div class="topcoatx-navigation-bar__item center">
+             <div class="topcoatx-navigation-bar__title">Select Visit Date</div>
+           </div>
+        </div>
+        
+    <div style="display:inline-block; min-height:290px;">
+      <div class="well well-sm " ng-model="dt" data-ng-change="selectDate(dt)">
+          <datepicker min="minDate" max="maxDate" show-weeks="showWeeks" ></datepicker>
+      </div>
+    </div>
+
+</div>

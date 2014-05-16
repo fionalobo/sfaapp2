@@ -1,0 +1,90 @@
+<!doctype html>
+<html  ng-app = "mainapp">
+  <head lang="en">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> 
+
+    <link rel="stylesheet" href="css/topcoat-mobile-light.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="css/testscript.css">
+    
+    <title>SFA - Mobile App</title>
+    <style type="text/css">
+
+      #sp-nav {
+        overflow: auto;
+        background: #32394a;
+      }
+
+      #sp-page {
+        background-color: darkgray;
+        background-image: url(img/mobile2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: whitesmoke;
+      }
+
+      #sp-page > p {
+        padding: 10px;
+      }
+
+    @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}
+
+      body {
+/*            background: #32394a;*/
+        background-size: 100% 100%;
+        }
+
+      #LoginPg {
+/*        position: absolute;*/
+/*        background-size: 100% 100%;
+        padding: 0px;*/
+                  /* grey background */
+                 background: -webkit-gradient(linear, 0 0, 100% 0, from(rgb(190,189,194)), to(rgb(109,106,115)));
+                 background: -webkit-linear-gradient(left, rgb(190,189,194), rgb(109,106,115));
+                 background: -moz-linear-gradient(left, rgb(190,189,194), rgb(109,106,115));
+                 background: -o-linear-gradient(left, rgb(190,189,194), rgb(109,106,115));
+                 background: linear-gradient(left, rgb(190,189,194), rgb(109,106,115));*/ /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */ /* Standard syntax (must be last) */
+
+      }
+
+    </style>
+  </head>
+  
+  <body>
+<!--    <div data-ng-controller="MenuCtrl">-->
+<!--        <div ui-view></div>-->
+    <form name="myform"  novalidate>
+
+       <div ui-view >
+       </div> 
+     </form>
+
+<!--    </div>-->
+
+    <script src="jslib/angular.js"></script>
+    <script src="jslib/angular-ui-router.js"></script>
+    <script src="jslib/underscore.js"></script>
+    <script src="jslib/ui-bootstrap-tpls-0.10.0.js"></script>
+
+<!--    <script src="scripts/ng-mobile-menu.js"></script>-->
+<!--    <script src="scripts/Menu.js"></script>-->
+
+    <script src="scripts/focus.js"></script>
+    <script src="scripts/ajaxserver.js"></script>
+    <script src="scripts/loginserver.js"></script>
+    <script src="scripts/lstoreserver.js"></script>
+    <script src="scripts/ac5lib.js"></script>
+    <script src="scripts/acjslib.js"></script>
+    <script src="scripts/dialog.js"></script>
+    <script src="scripts/dataobj.js"></script>
+    <script src="scripts/spmenu.js"></script>
+    <script src="scripts/reftables.js"></script>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/docvisitapp.js"></script>
+
+
+  </body>
+</html>

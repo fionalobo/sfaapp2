@@ -1,0 +1,42 @@
+<div id="LoginPg">
+    <div >
+        <div class="topcoatx-navigation-bar">
+            <div class="topcoatx-navigation-bar__item center full">
+                <div class="topcoatx-navigation-bar__title">Login</div>
+            </div>
+        </div>
+            
+        <div class="loginbox ninety-perc">
+            <div class="login_item">
+                <div class="label" >User Id.</div>
+                <div>
+                    <input type="text" class="topcoatx-text-input upper seventy-perc" data-ng-model="user.userid" name="m_userid" style="background-color: rgb(222,222,222);" required>
+                </div>
+            </div>
+            <br/>
+
+            <div class="login_item">
+                <div class="label" >Password</div>
+                <div>
+                    <input type="password" class="topcoatx-text-input upper seventy-perc" data-ng-model="user.pwd" name="m_pwd" style="background-color: rgb(222,222,222);" required>
+                </div>
+            </div>
+            <br/>
+
+            <div class="login_item">
+                <div class="label" >Pin</div>
+                <div>
+                    <input type="password" class="topcoatx-text-input upper seventy-perc" data-ng-model="user.pin" name="m_pin" style="background-color: rgb(222,222,222);" required>
+                </div>
+            </div>
+            <br/>
+
+            <div class="login_item">
+                <div style="vertical-align: top">
+                    <button class="topcoatx-buttonblue" data-ng-click="loginUser()">Login</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
